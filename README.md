@@ -1,7 +1,5 @@
-# LLM-Based Fuzzy Matching Agent
+# AI Financial advisor full-stack application
 
-## Description
-Created for handling missing values in datasets using Record-linkage, Embedchain, and LLAMA 3.
 
 ## Installation
 
