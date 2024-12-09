@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.polka {
+  background-color: #ffffff;
+  /* background-image: radial-gradient(rgb(240, 238, 245) 10%, transparent 10%),
+    radial-gradient(rgb(160, 240, 209) 10%, transparent 10%); */
+  background-position: 0px 0px, 8px 8px;
+  background-size: 16px 16px;
+}
+
+.chat-messages {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.message-box {
+  margin-bottom: 16px;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.user-message {
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin-left: 1px; /* Aligns text with response messages */
+}
+
+.response-message {
+  display: flex;
+  align-items: center;
+  background-color: #ebedf0; /* Light background for response */
+  padding: 12px 8px;
+  border-radius: 8px;
+}
+
+.response-message .avatar {
+  margin-right: 12px;
+  width: 36px; /* Adjust the size as needed */
+  height: 36px; /* Adjust the size as needed */
+  border-radius: 50%;
+}
+
+.user-message, .response-message {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.self-start {
+  align-self: flex-start;
+}
+
+th {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  background-color: #f0f0f0; /* Light grey background for headers */
+  border-bottom: 1px solid #ddd; /* Adds a bottom border to header cells */
+}
+
+td {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  padding: 8px;
+  border: 1px solid #ddd; /* Adds a border to table cells */
+}
+
+table {
+ /* Full width tables */
+  border-spacing: 0; /* Removes spacing between borders */
+}
+
+/* Optional: Add zebra-striping to rows */
+tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.dataframe-label {
+  cursor: pointer;
+  color: #007bff; /* Use your theme's color */
+  font-weight: 600; /* Optional: if you want the label to be bold */
+  /* Additional styling as needed */
+}
+
