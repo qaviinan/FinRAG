@@ -7,10 +7,10 @@ FinRAG is an AI-powered financial advisor application designed to provide person
 ## Features
 
 ### Frontend
-- **React Framework:** Delivers a dynamic and responsive user interface.
-- **User-Friendly Interface:** Simplifies navigation and interaction for users seeking investment advice.
-- **API Integration:** Communicates seamlessly with the Django backend to fetch and display investment data.
-- **Optimized Performance:** Ensures fast load times and smooth user experience through efficient rendering.
+- React Framework
+- Natural Language Interface
+- API Integration
+- Optimized Performance
 
 ### Backend
 - **Django Framework:** Provides a robust and scalable backend infrastructure.
