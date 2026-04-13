@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class InvestmentScheme(models.Model):
     scheme_id = models.CharField(max_length=100, unique=True)
     name = models.CharField(max_length=200)
@@ -15,3 +16,22 @@ class InvestmentScheme(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Feedback(models.Model):
+    LIKE = "like"
+    DISLIKE = "dislike"
+    RATING_CHOICES = [(LIKE, "Like"), (DISLIKE, "Dislike")]
+
+    response_id = models.CharField(max_length=100, db_index=True)
+    rating = models.CharField(max_length=10, choices=RATING_CHOICES)
+    query = models.TextField(blank=True)
+    session_id = models.CharField(max_length=100, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        # One rating per (session, response) — upsert on the frontend side
+        unique_together = [("response_id", "session_id")]
+
+    def __str__(self):
+        return f"{self.rating} on {self.response_id}"
